@@ -44,6 +44,7 @@ class Utenza implements Smarthphone {
 }
 
 const utente1 = new Utenza(50, 3, 0.2);
+console.log("utente1");
 console.log("Ricarica:", utente1.carica);
 console.log("Chiamate:", utente1.getNumeroChiamate());
 console.log("credito residuo:", utente1.numero404());
@@ -51,6 +52,7 @@ utente1.azzeraChiamate();
 console.log("Numero di chiamate dopo l'azzeramento:", utente1.getNumeroChiamate());
 
 const utente2 = new Utenza(30, 5, 0.2);
+console.log("utente2");
 console.log("Ricarica:", utente2.carica);
 console.log("Chiamate:", utente2.getNumeroChiamate());
 console.log("credito residuo:", utente2.numero404());
@@ -58,6 +60,7 @@ utente2.azzeraChiamate();
 console.log("Numero di chiamate dopo l'azzeramento:", utente2.getNumeroChiamate());
 
 const utente3 = new Utenza(20, 10, 0.2);
+console.log("utente3");
 console.log("Ricarica:", utente3.carica);
 console.log("Chiamate:", utente3.getNumeroChiamate());
 console.log("credito residuo:", utente3.numero404());
