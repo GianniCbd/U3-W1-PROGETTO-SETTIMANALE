@@ -61,12 +61,22 @@ function effettuaChiamata() {
     var durataChiamataInput = document.getElementById("durataChiamataInput");
     var durataChiamata = parseInt(durataChiamataInput.value) || 0;
     var i = 0;
-    while (utente1.carica > 0 && i < durataChiamata) {
-        utente1.chiamata(i);
-        i++;
-    }
-    utente1.carica = Math.floor(utente1.carica);
-    utente1.modifica();
+    // while (utente1.carica > 0 && i < durataChiamata) {
+    //   utente1.chiamata(i);
+    //   i++;
+    // }
+    // utente1.carica = Math.floor(utente1.carica);
+    // utente1.modifica();
+    var calcolo = setInterval(function () {
+        if (utente1.carica > 0 && i < durataChiamata) {
+            utente1.chiamata(i);
+            i++;
+            utente1.modifica();
+        }
+        else {
+            clearInterval(calcolo);
+        }
+    }, 1000);
 }
 function azzeraChiamate() {
     utente1.azzeraChiamate();

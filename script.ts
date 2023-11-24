@@ -76,14 +76,24 @@ function effettuaChiamata(): void {
   const durataChiamata: number = parseInt(durataChiamataInput.value) || 0;
 
   let i = 0;
-  while (utente1.carica > 0 && i < durataChiamata) {
-    utente1.chiamata(i);
-    i++;
-  }
+  // while (utente1.carica > 0 && i < durataChiamata) {
+  //   utente1.chiamata(i);
+  //   i++;
+  // }
 
-  utente1.carica = Math.floor(utente1.carica);
+  // utente1.carica = Math.floor(utente1.carica);
 
-  utente1.modifica();
+  // utente1.modifica();
+
+  const calcolo = setInterval(() => {
+    if (utente1.carica > 0 && i < durataChiamata) {
+      utente1.chiamata(i);
+      i++;
+      utente1.modifica();
+    } else {
+      clearInterval(calcolo);
+    }
+  }, 1000);
 }
 
 function azzeraChiamate(): void {
