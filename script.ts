@@ -57,7 +57,7 @@ class Utenza implements Smarthphone {
           <p>Chiamate: ${this.getNumeroChiamate()}</p>
           <p>Credito Residuo: ${this.numero404()}</p>`;
     } else {
-      console.error("Element with id 'informazioni' not found.");
+      console.error("Informazione non trovato.");
     }
   }
 }
