@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+  </head>
+  <body class="d-flex flex-column align-items-center justify-content-center vh-100">
+    <div id="smartphone" class="text-center">
+      <div class="d-flex justify-content-between">
+        <h2 class="mb-5"></h2>
+        <div class="d-flex">
+          <p><i class="bi bi-wifi me-2"></i></p>
+          <i class="bi bi-reception-4 me-2"></i>
+          <i class="bi bi-battery-half"></i>
+        </div>
+      </div>
+      <div id="informazioni"></div>
+      <form id="ricaricaForm" class="mb-3" onsubmit="return false;">
+        <label for="ricaricaInput">Ricarica Amount:</label>
+        <input type="number" id="ricaricaInput" class="form-control" />
+        <button onclick="ricarica()" class="btn btn-primary mt-2">Ricarica</button>
+      </form>
+
+      <form id="chiamataForm" class="mb-3" onsubmit="return false;">
+        <label for="durataChiamataInput">Durata Chiamata (minuti):</label>
+        <input type="number" id="durataChiamataInput" class="form-control" />
+        <button id="chiama" class="btn btn-success m-5" onclick="effettuaChiamata()">
+          <i class="bi bi-telephone"></i>
+        </button>
+      </form>
+
+      <button onclick="azzeraChiamate()" class="btn btn-secondary mt-2">Azzera Chiamate</button>
+      <button id="reset" class="btn btn-danger m-5" type="button" onclick="reset()">X</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
